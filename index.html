@@ -98,9 +98,13 @@
   </div>
   </section>
 
-    <footer>
-        &copy; 2024 iiDanto
-    </footer>
-    
+    <footer id="copyright">
+    &copy; 2024 - <span id="currentYear"></span> iiDanto
+</footer>
+
+<script>
+    document.getElementById('currentYear').innerText = new Date().getFullYear();
+</script>
+  
 </body>
 </html>
