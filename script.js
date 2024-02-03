@@ -7,7 +7,7 @@ window.addEventListener("scroll", function () {
         // Scrolling down
         document.body.classList.add("scrolling-down");
     } else {
-        
+
         document.body.classList.remove("scrolling-down");
     }
 
