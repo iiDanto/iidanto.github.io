@@ -1,42 +1,447 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>iiDanto | Home</title>
+    <meta name="description" content="iiDanto - Java Minecraft Plugin Developer. Creating efficient and lightweight plugins for Minecraft servers.">
+    <meta name="keywords" content="iiDanto, Java Developer, Minecraft Plugin Developer, Bukkit, Spigot, Paper, Minecraft Plugins">
+    <meta name="author" content="iiDanto">
+    <title>iiDanto - Minecraft Plugin Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <a href="/index.html" class="logo">iiDanto</a>
-        <nav>
-            <a href="/index.html" class="active"> Home</a>
-            <a href="/services.html">Services</a>
-            <a href="/projects.html" >Projects</a>
-            <a href="/experience.html">Experience</a>
-            <a href="https://discordapp.com/users/1023848373234716682" >Contact</a>
-        </nav>
-    </header>
-    <section class="home">
-        <div class="home-img">
-            <img src="main.png" alt="">
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-text">Loading...</div>
         </div>
-        <div class="home-content">
-            <h1>Hiya, I'm <span>iiDanto</span></h1>
-            <h3 class="typing-text">I'm a <span></span></h3>
-            <p>Hello! My name is Danto. I am a 15 year old developer who is looking to deepen into making projects to help people further with their own projects. I have a lot of experience and skills that I can implement into your network or community. Here's a little bit about myself. I am a 15 year old developer from Belgium who likes to help out other people, The last 4 years I've been developing and staffing on servers. I am interested in Aviation, Developing, Sports and Minecraft. If you want to have me inside of your projects, don't hesitate to contact me using the button below.</p>
-            <div class="social-icons">
-                <a href="https://github.com/iidanto"><i class="fa-brands fa-github"></i></a>
-                <a href="https://discordapp.com/users/1023848373234716682"><i class="fa-brands fa-discord"></i></a>
-                <a href="https://youtube.com/@iidanto"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">iiDanto</a>
             </div>
-            <a href="https://discordapp.com/channels/@me/1023848373234716682/" class="btn">Hire me</a>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="highlight">iiDanto</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        <span class="typing-text" id="typingText"></span>
+                        <span class="cursor">|</span>
+                    </p>
+                    <p class="hero-description">
+                        Passionate Java developer specializing in lightweight and efficient Minecraft plugins for server enhancement.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-elements">
+                        <div class="floating-element fe-1"></div>
+                        <div class="floating-element fe-2"></div>
+                        <div class="floating-element fe-3"></div>
+                        <div class="floating-element fe-4"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+            </div>
         </div>
     </section>
-    <div class="copyright">
-        <p>&copy; 2025 iiDanto. All rights reserved.</p>
-    </div>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know me better</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-card">
+                        <h3>Who I Am</h3>
+                        <p>
+                            I'm a dedicated Java developer with a passion for Minecraft plugin development. 
+                            I focus on creating lightweight, efficient plugins that enhance server performance while 
+                            providing valuable functionality to players and administrators.
+                        </p>
+                    </div>
+                    <div class="about-card">
+                        <h3>What I Do</h3>
+                        <p>
+                            I specialize in developing Minecraft plugins using Java, working with Bukkit/Velocity APIs. 
+                            My plugins are designed to be server-efficient, easy to configure, and reliable for production environments.
+                        </p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="34">0</div>
+                            <div class="stat-label">Plugins Created</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="4">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="8">0</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-subtitle">Tools and technologies I work with</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="category-title">Programming</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cube"></i>
+                            <span>Bukkit API</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cubes"></i>
+                            <span>Velocity API</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Command API</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cogs"></i>
+                            <span>Gradle</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">Minecraft Development</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-puzzle-piece"></i>
+                            <span>Plugin Architecture</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>Configuration Management</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-bolt"></i>
+                            <span>Event Handling</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-command"></i>
+                            <span>API Usage</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-sync"></i>
+                            <span>Async Programming</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">Tools</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-brain"></i>
+                            <span>IntelliJ IDEA</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-hammer"></i>
+                            <span>Gradle</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-server"></i>
+                            <span>Pterodactyl Server Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Client Testimonials</h2>
+                <p class="section-subtitle">What clients say about my work</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "iiDanto was developing all required plugins in a matter of no time, they all worked very well and very efficient and didn‘t really affect the TPS. All in all very recommendable services and a very kind person behind it aswell."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="assets/juliwilliams.jpg" alt="Juliwilliamus" />
+                        </div>
+                        <div class="author-info">
+                            <h4 class="author-name">Juliwilliamus</h4>
+                            <p class="author-role">Owner @ Vikur Network</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "iiDanto created a staff logging plugin for me, he managed to finish the plugin super quickly at an extremely high quality. When I wanted one change he implemented the change in under 5 minutes. I'd honestly really recommend using IIDanto due to quality and service time."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="./assets/vxlm.gif" alt="Vxlm" />
+                        </div>
+                        <div class="author-info">
+                            <h4 class="author-name">Vxlm</h4>
+                            <p class="author-role">Sr Admin @ EuropeMC</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "iiDanto is an incredibly dedicated and skilled developer who consistently goes above and beyond. His plugins are not only well-made but also efficient and reliable. He’s always open to feedback and brings a positive, solution-focused mindset to every task.
+
+                            Beyond his technical skills, iiDanto is a great team member. He’s helped me and others learn to code, and he’s always available to support the team when needed. His professionalism, communication, and commitment to the community make him an excellent staff member and a valuable part of any project."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="./assets/egirlkai.jpg" alt="EgirlKai" />
+                        </div>
+                        <div class="author-info">
+                            <h4 class="author-name">EgirlKai</h4>
+                            <p class="author-role">Developer @ Vikur Network</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Danto is hard-working and altruistic. He is always helping out, even though he has not been asked to do so. He is reliable and dependable. If you ask him to do something he gets it done with a lot of heart and motivation. He does this work because he loves to be helpful and benefit others, hes not doing this for his own benefit, but for the community as a whole. Hes not looking for a promotion, hes looking for ways to be helpful and beneficial even if it creates a lot of work for himself. He is just a overall generous, kind-hearted, helpful, and a altruistic person."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="./assets/antvibez.png" alt="antvibez" />
+                        </div>
+                        <div class="author-info">
+                            <h4 class="author-name">Antvibez</h4>
+                            <p class="author-role">Owner @ MineFlare</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "iiDanto is an incredibly skilled developer, he's helped me start up my server from the ground up. He's always able to make the most lightweight plugins in the shortest amount of time. He's a very respectable person behind it all aswell holding an excellent level of professionalism."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="./assets/sebtro.png" alt="Sebtro" />
+                        </div>
+                        <div class="author-info">
+                            <h4 class="author-name">Sebtro</h4>
+                            <p class="author-role">Owner @ EU Practice</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Some of my recent work</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image iikits-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/iiDanto/iiKits" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">iiKits</h3>
+                        <p class="project-description">
+                            A simple, lightweight kit solution for your PvP Practice Server. Easily configurable, lag-free kit experience.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Bukkit API</span>
+                            <span class="tech-tag">Async Programming</span>
+                            <span class="tech-tag">YML Config</span>
+                            <span class="tech-tag">Gradle</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image iihomes-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/iiDanto/iiHomes" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">iiHomes</h3>
+                        <p class="project-description">
+                            A lightweight, simple and server efficient home plugin for your Minecraft server.
+                            Provides players with the ability to set and teleport to home locations.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Bukkit API</span>
+                            <span class="tech-tag">SQLite</span>
+                            <span class="tech-tag">Teleportation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-subtitle">Ready to bring your ideas to life</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>contact@iidanto.dev</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>GitHub</h3>
+                            <p>github.com/iiDanto</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Specialization</h3>
+                            <p>Minecraft Plugin Development</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 iiDanto. All rights reserved.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link" target="https://github.com/iiDanto">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
